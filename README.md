@@ -9,7 +9,7 @@ This GitHub Actions workflow builds the NAND / MTK-layout image for the CMCC RAX
 - Wi-Fi driver: 237 source's RAX profile selects `kmod-mt7915e`; this build does not carry over the AX3000T `mt_wifi` driver configuration.
 - LuCI theme: Aurora, matching the AX3000T 237 build
 
-The package selection carries over the AX3000T 237 configuration and adds `frpc`, SSR Plus, OpenClash, PassWall 2, and the AdGuardHome LuCI app. The AdGuardHome core is downloaded and managed from its LuCI app after first boot.
+The package selection is based on 237's MT7981 configuration without its proprietary Wi-Fi driver and adds FRPC with its LuCI app, SSR Plus, OpenClash, PassWall 2, and the AdGuardHome LuCI app. Simplified Chinese LuCI translations are enabled. The AdGuardHome core is downloaded and managed from its LuCI app after first boot.
 
 ## Build
 
