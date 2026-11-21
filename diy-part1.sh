@@ -17,5 +17,4 @@ src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-p
 src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall
 src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2
 src-git openclash https://github.com/vernesong/OpenClash
-src-git adguardhome https://github.com/kongfl888/luci-app-adguardhome
 EOF

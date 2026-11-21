@@ -19,6 +19,7 @@ sed -i 's/luci-theme-argon/luci-theme-aurora/g' feeds/luci/collections/luci/Make
 
 git clone --depth 1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
 git clone --depth 1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
+git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # Force installation of packages from their intended feeds.
 ./scripts/feeds install -a -f -p passwall_packages
@@ -26,7 +27,6 @@ git clone --depth 1 https://github.com/eamonxg/luci-app-aurora-config.git packag
 ./scripts/feeds install -a -f -p passwall2
 ./scripts/feeds install -a -f -p helloworld
 ./scripts/feeds install -a -f -p openclash
-./scripts/feeds install -a -f -p adguardhome
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
