@@ -6,6 +6,7 @@ This GitHub Actions workflow builds the NAND / MTK-layout image for the CMCC RAX
 - Branch: `openwrt-24.10-6.6`
 - Device profile: `cmcc_rax3000m` (NAND)
 - Kernel line: Linux 6.6
+- Default LAN address: `192.168.7.1`
 - Wi-Fi driver: 237 source's RAX profile selects `kmod-mt7915e`; this build does not carry over the AX3000T `mt_wifi` driver configuration.
 - LuCI theme: Aurora, matching the AX3000T 237 build
 

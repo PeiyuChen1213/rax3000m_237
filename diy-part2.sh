@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192\.168\.6\.1/192.168.7.1/' package/base-files/files/bin/config_generate
 
 # Keep the same Aurora theme and configuration app as the AX3000T build.
 sed -i 's/luci-theme-bootstrap/luci-theme-aurora/g' feeds/luci/collections/luci/Makefile
