@@ -7,10 +7,10 @@ This GitHub Actions workflow builds the NAND / MTK-layout image for the CMCC RAX
 - Device profile: `cmcc_rax3000m` (NAND)
 - Kernel line: Linux 6.6
 - Default LAN address: `192.168.7.1`
-- Wi-Fi driver: 237 source's RAX profile selects `kmod-mt7915e`; this build does not carry over the AX3000T `mt_wifi` driver configuration.
+- Wi-Fi: uses the RAX3000M MTK `mt_wifi` driver from the 237 source, with `wifi-scripts`, `mtwifi-cfg`, and the MTK LuCI wireless page.
 - LuCI theme: Aurora, matching the AX3000T 237 build
 
-The package selection is based on 237's MT7981 configuration without its proprietary Wi-Fi driver and adds FRPC with its LuCI app, SSR Plus, OpenClash, PassWall 2, and the AdGuardHome LuCI app. Simplified Chinese LuCI translations are enabled. The AdGuardHome core is downloaded and managed from its LuCI app after first boot.
+The image includes FRPC, SSR Plus, OpenClash, PassWall 2 (the old PassWall app is disabled), and AdGuardHome. It also includes MTK EQoS bandwidth control, TurboACC, `wrtbwmon` traffic history, USB storage support, disk management, and KSmbd for USB file sharing. Simplified Chinese LuCI translations are enabled. The AdGuardHome core is downloaded and managed from its LuCI app after first boot.
 
 ## Build
 
