@@ -10,9 +10,12 @@
 # See /LICENSE for more information.
 #
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
-# Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# Extra package feeds used by this firmware.
+cat >> feeds.conf.default <<'EOF'
+src-git helloworld https://github.com/fw876/helloworld
+src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages
+src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall
+src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2
+src-git openclash https://github.com/vernesong/OpenClash
+src-git adguardhome https://github.com/kongfl888/luci-app-adguardhome
+EOF
