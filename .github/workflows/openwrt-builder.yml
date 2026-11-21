@@ -96,6 +96,17 @@ jobs:
       run: |
         cd openwrt
         make defconfig
+        # Preserve the MTK LuCI package selections and required dependencies
+        # after config normalization, including packages from nested MTK paths.
+        for package in \
+          luci-app-mtwifi-cfg luci-i18n-mtwifi-cfg-zh-cn \
+          luci-app-wrtbwmon luci-i18n-wrtbwmon-zh-cn \
+          luci-app-eqos-mtk luci-i18n-eqos-mtk-zh-cn \
+          luci-app-turboacc-mtk luci-i18n-turboacc-mtk-zh-cn \
+          wget-ssl tc-tiny ebtables-legacy-utils ebtables-legacy \
+          kmod-netlink-diag kmod-bonding; do
+          grep -qxF "CONFIG_PACKAGE_${package}=y" .config || echo "CONFIG_PACKAGE_${package}=y" >> .config
+        done
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
