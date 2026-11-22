@@ -14,7 +14,5 @@
 cat >> feeds.conf.default <<'EOF'
 src-git helloworld https://github.com/fw876/helloworld
 src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages
-src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall
-src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2
 src-git openclash https://github.com/vernesong/OpenClash
 EOF

@@ -23,8 +23,6 @@ git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome.git packag
 
 # Force installation of packages from their intended feeds.
 ./scripts/feeds install -a -f -p passwall_packages
-./scripts/feeds install -a -f -p passwall
-./scripts/feeds install -a -f -p passwall2
 ./scripts/feeds install -a -f -p helloworld
 ./scripts/feeds install -a -f -p openclash
 
